@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<UserSecretsId>f0259116-b7f0-4add-bb75-38034c292f03</UserSecretsId>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Repositories\**" />
+		<Content Remove="Repositories\**" />
+		<EmbeddedResource Remove="Repositories\**" />
+		<None Remove="Repositories\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.4" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PayBill.Core\PayBill.Core.csproj" />
+	  <ProjectReference Include="..\PayBill.UserManagement\PayBill.UserManagement.csproj" />
+	</ItemGroup>
+</Project>
